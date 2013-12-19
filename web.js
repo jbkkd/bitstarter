@@ -13,7 +13,7 @@ app.get('/', function(request, response) {
 //  var fileContents = file.toString();
 //  var array = files + "";
 //  response.send(fileContents);
-  respone.send(filePath);
+  response.send(filePath);
 //  response.send(array);
 });
 
