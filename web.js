@@ -5,15 +5,16 @@ var app = express();
 app.use(express.logger());
 
 var dir = './';
-var files = fs.readdirSync(dir);
-var filePath = path.join(__dirname + '/index.html');
+//var files = fs.readdirSync(dir);
+var filePath = path.join(__dirname, 'index.html');
 
 app.get('/', function(request, response) {
-//  var file = fs.readFile(filePath);
+  var file = fs.readFile(filePath);
 //  var fileContents = file.toString();
-  var array = files + "";
+//  var array = files + "";
 //  response.send(fileContents);
-  response.send(array);
+  respone.send(filePath);
+//  response.send(array);
 });
 
 var port = process.env.PORT || 5000;
