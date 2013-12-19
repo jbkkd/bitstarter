@@ -8,7 +8,7 @@ var dir = './';
 var filePath = path.join(__dirname, 'index.html');
 
 app.get('/', function(request, response) {
-  var file = fs.readFile(filePath);
+  var file = fs.readFileSync(filePath);
   var fileContents = file.toString();
   response.send(fileContents);
 });
