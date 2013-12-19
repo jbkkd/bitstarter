@@ -4,12 +4,16 @@ var path = require('path');
 var app = express();
 app.use(express.logger());
 
+var dir = './';
+var files = fs.readdirSync(dir);
 var filePath = path.join(__dirname + '/index.html');
 
 app.get('/', function(request, response) {
-  var file = fs.readFile(filePath);
-  var fileContents = file.toString();
-  response.send(fileContents);
+//  var file = fs.readFile(filePath);
+//  var fileContents = file.toString();
+  var array = files + "";
+//  response.send(fileContents);
+  response.send(array);
 });
 
 var port = process.env.PORT || 5000;
